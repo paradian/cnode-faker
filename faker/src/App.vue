@@ -9,10 +9,21 @@
          <input type="text" class="search-query">
        </form>
        <ul class="nav-list">
-         <li>首页</li>
-         <li>未读信息</li>
-         <li>新手入门</li>
-         <li>关于</li>
+         <li>
+           <router-link to="/">首页</router-link>
+         </li>
+         <li>
+           <router-link to="/">未读信息</router-link>
+         </li>
+         <li>
+           <router-link to="/">新手入门</router-link>
+         </li>
+         <li>
+           <router-link to="/">关于</router-link>
+         </li>
+         <li>
+           <router-link to="/add">新建主题</router-link>
+         </li>
        </ul>
      </div>
    </div>
@@ -34,5 +45,20 @@ export default {
     position: relative;
     background: #444;
     font-size: 13px;
+  }
+  .nav-list {
+    padding-bottom: 20px;
+    font-size: 13px;
+  }
+  .nav-list li {
+    list-style: none;
+    display: inline-block;
+    color: #ccc;
+    padding: 10px 10px;
+  }
+  .nav-list li a {
+    list-style: none;
+    color: #ccc;
+    border-bottom: none;
   }
 </style>

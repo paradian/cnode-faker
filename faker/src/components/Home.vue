@@ -1,9 +1,8 @@
 <template>
     <div>
       <ul>
-        <router-link to="/"></router-link>
         <li v-for="(item) of dataArr" :key="item.id" @click="select(item.id)">
-          {{item.title}}
+           <router-link to="/detail">{{ item.title }}</router-link>
         </li>
       </ul>
     </div>
@@ -22,7 +21,7 @@
       methods:{
           select:function (id) {
             console.log(id);
-
+            this.$store.commit('getDetail',id)
           }
       },
       mounted: function (res) {
@@ -34,6 +33,7 @@
           .then(function (data) {
             console.log(data)
             this.dataArr=data.data.data;
+            this.$store.commit('save',this.dataArr);
             console.log(this.dataArr)
           }.bind(this))
       }
