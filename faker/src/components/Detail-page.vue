@@ -35,13 +35,21 @@
           </div>
 
     </div>
-    <div class="panel"></div>
+    <div class="panel">
+      <div class="header">
+        <span>添加回复</span>
+      </div>
+      <div class="reply">
+        <Ueditor @ready="editorReady"></Ueditor>
+        <button @click="reply">提交</button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
   import axios from 'axios';
-
+import  Ueditor from './Ueditor';
   export default {
     name: "Detail-page",
     data: function () {
@@ -49,6 +57,9 @@
         data: this.$store.state.certain,
         pagedetail: {}
       }
+    },
+    components: {
+      Ueditor
     },
     computed: {
       createDate:function () {
@@ -60,6 +71,19 @@
         console.log(this.pagedetail.create_at);
       }
     },
+    methods: {
+      editorReady (editorInstance) {
+        editorInstance.setContent('Hello world!<br>你可以在这里初始化编辑器的初始内容。');
+        editorInstance.addListener('contentChange', () => {
+          console.log('编辑器内容发生了变化：', editorInstance.getContent());
+          this.content= editorInstance.getContent();
+          console.log(this.content);
+        });
+      },
+      reply:function () {
+        console.log('hello')
+      }
+    },
     mounted: function () {
       console.log(this.data);
       axios.get('https://cnodejs.org/api/v1/topic/' + this.data + '')
@@ -68,6 +92,7 @@
           this.pagedetail = data.data.data;
         }.bind(this));
     }
+
   }
 </script>
 
