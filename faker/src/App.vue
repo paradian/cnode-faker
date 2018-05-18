@@ -16,7 +16,7 @@
            <router-link to="/">未读信息</router-link>
          </li>
          <li>
-           <router-link to="/">新手入门</router-link>
+           <router-link to="/user">新手入门</router-link>
          </li>
          <li>
            <router-link to="/">关于</router-link>

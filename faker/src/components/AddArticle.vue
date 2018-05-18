@@ -4,7 +4,7 @@
         <option value="dev">测试</option>
         <option value="ask">ask</option>
       </select><br>
-    <input type="text" class="article-title" placeholder="字数要求10字以上">
+    <input type="text" class="article-title" placeholder="字数要求10字以上" v-model="title">
     <Ueditor @ready="editorReady"></Ueditor>
     <button @click="postArticle">提交</button>
   </div>
@@ -18,7 +18,7 @@
       data: function() {
           return {
             content:'',
-
+            title:'',
             postpackage
           }
       },
@@ -32,7 +32,7 @@ methods: {
 
             this.postpackage={
               accesstoken: 'a071d5df-d1f5-42e5-8d51-afcdb09c328e',
-              title:'hello world !',
+              title:this.title,
               tab:'dev',
               content:this.content
             }

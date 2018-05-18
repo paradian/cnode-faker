@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from '@/components/Home';
 import AddArticle from '@/components/AddArticle';
 import DetailPage from '@/components/Detail-page';
+import User from '@/components/User'
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +22,10 @@ export default new Router({
       path:'/detail',
       name:'DetailPage',
       component:DetailPage
+    },
+    {
+      path:'/user',
+      component:User
     }
   ]
 })

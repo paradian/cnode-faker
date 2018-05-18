@@ -17,7 +17,6 @@
       </div>
       <div class="text-content">
         <div class="innertext" v-html="pagedetail.content">
-
         </div>
       </div>
     </div>
@@ -33,7 +32,6 @@
             </div>
             <div v-html="item.content"></div>
           </div>
-
     </div>
     <div class="panel">
       <div class="header">
@@ -55,7 +53,7 @@ import  Ueditor from './Ueditor';
     data: function () {
       return {
         data: this.$store.state.certain,
-        pagedetail: {}
+        pagedetail: {},
       }
     },
     components: {
@@ -73,7 +71,7 @@ import  Ueditor from './Ueditor';
     },
     methods: {
       editorReady (editorInstance) {
-        editorInstance.setContent('Hello world!<br>你可以在这里初始化编辑器的初始内容。');
+        editorInstance.setContent('');
         editorInstance.addListener('contentChange', () => {
           console.log('编辑器内容发生了变化：', editorInstance.getContent());
           this.content= editorInstance.getContent();
@@ -81,7 +79,16 @@ import  Ueditor from './Ueditor';
         });
       },
       reply:function () {
-        console.log('hello')
+          console.log('hello');
+          var replies={
+            accseetoken:'a071d5df-d1f5-42e5-8d51-afcdb09c328e',
+            content:'加油！',
+          }
+        console.log(this)
+        axios.post('https://cnodejs.org/api/v1/topic/'+this.data + '/replies',replies)
+          .then(function (res) {
+            console.log(res)
+          }.bind(this));
       }
     },
     mounted: function () {
@@ -92,7 +99,6 @@ import  Ueditor from './Ueditor';
           this.pagedetail = data.data.data;
         }.bind(this));
     }
-
   }
 </script>
 
