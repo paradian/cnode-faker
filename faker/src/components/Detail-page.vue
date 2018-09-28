@@ -24,7 +24,7 @@
       <div class="reply-header">
         <span>{{pagedetail.reply_count}}</span>
       </div>
-          <div class="reply" v-for="item of pagedetail.replies">
+          <div class="reply" v-for="(item,index) of pagedetail.replies" v-bind:key="index">
             <div class="author-detail">
               <a href='' class="avatar-img">
                 <img :src="item.author.avatar_url"  alt="">

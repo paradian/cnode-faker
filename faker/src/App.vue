@@ -5,9 +5,9 @@
        <a href="/" class="logo">
          <img src="https://o4j806krb.qnssl.com/public/images/cnodejs_light.svg" alt="">
        </a>
-       <form action="/search">
-         <input type="text" class="search-query">
-       </form>
+       <div class="input_container">
+         <input type="text">
+       </div>
        <ul class="nav-list">
          <li>
            <router-link to="/">首页</router-link>
@@ -49,6 +49,7 @@ export default {
   .nav-list {
     padding-bottom: 20px;
     font-size: 13px;
+    display: inline-block;
   }
   .nav-list li {
     list-style: none;

@@ -1,0 +1,37 @@
+.text_word:read-only {
+    color: red
+}
+.first_button:active {
+    transform: scale(2);
+    color:blue
+}
+.first_checkbox:checked {
+transform: translateX(100px)
+}
+.css_container {
+    height: 300px;  
+    width: 500px;
+    background-color: darkgoldenrod;
+    border: solid 20px yellowgreen;
+    margin: 30px;
+    box-sizing: content-box;
+    padding: 10px;
+    /* margin and padding do not support the color attribute */
+}
+.text_test {
+    font-family: 'myfont'
+}
+.css_container-1 {
+    display: flex;
+    width: 100%;
+    flex-direction: column
+}
+.left, .right {
+    width:  200px;
+    background-color: seagreen
+}
+.middle {
+    flex: 1 100px;
+    background: springgreen
+
+}

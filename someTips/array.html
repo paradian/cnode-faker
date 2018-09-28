@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="echarts.js"></script>
+    <link rel="stylesheet" href="array.css">
+    <link rel="stylesheet" href="font.css">
+</head>
+<body>
+    <style>
+    .view {
+        width: 600px;
+        height: 500px;
+    }
+    .father {
+        height: 300px;
+        width: 300px;
+        background-color: antiquewhite;
+        /* position: absolute; */
+    }
+    .child {
+        height: 50px;
+        width: 50px;
+        background-color: aquamarine;
+        position: absolute;
+    }
+    .secondchild {
+        width: 200px;
+        height: 100px;
+        float: left;
+        background-color: rgb(66, 4, 124)
+    }
+    .center {
+        width: 200px;
+        height: 200px;
+        /* margin: 0 auto; */
+        position:absolute;
+        margin: auto;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: burlywood
+    }
+    /* .align {
+        height: 100px;
+        width: 80px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: saddlebrown;
+    } */
+     .align1 {
+        height: 80px; 
+        width: 100px;
+        background-color: seagreen;
+        position:relative;
+        left: 50%;
+        top: 50%;
+        margin: -100px 0 0 -100px
+    } 
+    </style>
+    <div class="css_container">
+        <div class="text_test">
+            hello world
+            can you hear me?
+            i love you ,but,,,
+        </div>
+        <button class="first_button">click me</button>
+        <input type="checkbox" class="first_checkbox">
+        <input type="text" required pattern="">
+    </div>
+    <div class="css_container-1">
+        <div class="left">hello</div>
+        <div class="middle">paradian</div>
+        <div class="right">leoric</div>
+    </div>
+    <div class="view">
+
+    </div>
+    <div class="father">
+            <div class="secondchild"></div>
+        <div class="child" onclick="testClick(event)"></div>
+    </div>
+    <div class="center">
+<div class="align"></div>
+<div class="align1"></div>
+    </div>
+    <ul id="testUL">
+        <li> index = 0</li>
+        <li> index = 1</li>
+        <li> index = 2</li>
+        <li> index = 3</li>
+    </ul>
+    <script src="myArray.js"></script>
+    
+</body>
+</html>

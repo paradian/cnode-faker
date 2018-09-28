@@ -1,0 +1,22 @@
+{
+  "name": "myexpress",
+  "version": "1.0.0",
+  "description": "my express test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paradian/cnode-faker.git"
+  },
+  "keywords": [
+    "paradian"
+  ],
+  "author": "paradian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paradian/cnode-faker/issues"
+  },
+  "homepage": "https://github.com/paradian/cnode-faker#readme"
+}
